@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_clean_arch/flutter_clean_arch.dart';
 
 void main() {
+  FlutterCleanArch.instance.init();
+
   runApp(const MyApp());
 }
 
@@ -112,9 +114,6 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
-              '${Calculator().addOne(1)}'
             )
           ],
         ),

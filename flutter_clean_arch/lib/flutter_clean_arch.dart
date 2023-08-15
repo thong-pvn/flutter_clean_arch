@@ -1,7 +1,16 @@
 library clean_arch;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 5;
+import 'package:flutter_clean_arch/src/flutter_clean_arch_impl.dart';
+
+abstract class FlutterCleanArch {
+  static final FlutterCleanArch _instance = FlutterCleanArchImpl();
+
+  static FlutterCleanArch get instance => _instance;
+
+  /// Short form to access the instance of GetIt
+  static FlutterCleanArch get I => _instance;
+
+  void init();
+
+  void reset();
 }
