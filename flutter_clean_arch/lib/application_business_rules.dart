@@ -1,0 +1,1 @@
+// usecases: hold every functionality provided by the application
